@@ -191,7 +191,7 @@ return {
                 html = '<div class="item clearfix" id="inc-%id%"><div class="item__description">%description%</div><div class="right clearfix">   <div class="item__value">%value%</div><div class="item__delete"> <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             } else if(type === 'exp'){
                 element =DOMstrings.expenseContainer;
-               html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div> <div class="right clearfix"><div class="item__value">- %value%</div> <div class="item__percentage">21%</div><div class="item__delete">  <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>'
+                html = '<div class="item clearfix" id="exp-%id%"><div class="item__description">%description%</div><div class="right clearfix"><div class="item__value">%value%</div><div class="item__percentage">21%</div><div class="item__delete"><button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button></div></div></div>';
             }
 
             // 2. Replace the placeholder text with some actual data
@@ -235,7 +235,7 @@ return {
              if(obj.percentage> 0){
                 document.querySelector(DOMstrings.percentageLabel).textContent= obj.percentage+'%';
              }else {
-                 document.querySelector(DOMstrings.percentageLabel).textContent = '-----';
+                 document.querySelector(DOMstrings.percentageLabel).textContent = '---';
              }
 
          },
@@ -248,7 +248,7 @@ return {
                  if(percentages[index]>0){
                      current.textContent = percentages[index]+'%';
                  }else{
-                     current.textContent='---'
+                     current.textContent='---';
                  }
              });
 
